@@ -8,7 +8,6 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 import javax.persistence.*;
 
-@Data
 @Getter
 @Setter
 @EqualsAndHashCode(exclude = "id")
@@ -26,3 +25,5 @@ public class RawData {
     @Column(columnDefinition = "jsonb")
     private Update event;
 }
+
+
