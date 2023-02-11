@@ -8,9 +8,12 @@ import ru.zulvit.dao.AppUserDAO;
 import ru.zulvit.dao.RawDataDAO;
 import ru.zulvit.entity.AppUser;
 import ru.zulvit.entity.RawData;
+import ru.zulvit.entity.Search;
+import ru.zulvit.service.GettingVideoService;
 import ru.zulvit.service.MainService;
 import ru.zulvit.service.ProducerService;
 import ru.zulvit.service.enums.ServiceCommands;
+import ru.zulvit.utils.filter.ResultFilterUtils;
 
 import static ru.zulvit.entity.enums.UserState.BASIC_STATE;
 import static ru.zulvit.entity.enums.UserState.WAIT_EMAIL_CONFIRMATION_STATE;
@@ -22,11 +25,13 @@ public class MainServiceImpl implements MainService {
     private final RawDataDAO rawDataDAO;
     private final ProducerService producerService;
     private final AppUserDAO appUserDAO;
+    private final GettingVideoService gettingVideoService;
 
-    public MainServiceImpl(RawDataDAO rawDataDAO, ProducerService producerService, AppUserDAO appUserDAO) {
+    public MainServiceImpl(RawDataDAO rawDataDAO, ProducerService producerService, AppUserDAO appUserDAO, GettingVideoService gettingVideoService) {
         this.rawDataDAO = rawDataDAO;
         this.producerService = producerService;
         this.appUserDAO = appUserDAO;
+        this.gettingVideoService = gettingVideoService;
     }
 
     @Override
@@ -70,7 +75,11 @@ public class MainServiceImpl implements MainService {
         } else if (START.equals(serviceCommand)) {
             return "Hello. Let's start! Enter /help";
         } else {
-            return "Unknown command. Enter /help";
+            Search search = new Search(command, 1);
+            var searchResult = gettingVideoService.searchByTitle(search);
+            var filteredSearchResult = ResultFilterUtils.filterRepeat(searchResult);
+            log.debug(searchResult);
+            return filteredSearchResult.toString();
         }
     }
 

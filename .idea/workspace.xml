@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e5a3e45-2d60-41f9-84b9-349e10d16f25" name="Changes" comment="0.0.2-ALFA">
-      <change afterPath="$PROJECT_DIR$/common-jpa/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-jpa/src/main/java/ru/zulvit/dao/AppUserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-jpa/src/main/java/ru/zulvit/entity/AppUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-jpa/src/main/java/ru/zulvit/entity/enums/UserState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/enums/ServiceCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="5e5a3e45-2d60-41f9-84b9-349e10d16f25" name="Changes" comment="0.0.3-ALFA">
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/entity/Search.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/entity/Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/GettingVideoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/GettingVideoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/utils/filter/ResultFilterUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/entity/RawData.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/entity/RawData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/MainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/ConsumerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/ConsumerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/MainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/MainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/ProducerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/ProducerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/resources/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/resources/log4j2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +82,7 @@
       <recent name="C:\Users\savva\IdeaProjects\animesender-tg-bot-spring-microservice\dispatcher\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.zulvit.entity" />
       <recent name="ru.zulvit.configuration" />
     </key>
   </component>
@@ -180,7 +173,7 @@
       <workItem from="1674498754821" duration="3050000" />
       <workItem from="1674757122760" duration="3922000" />
       <workItem from="1674916799427" duration="1606000" />
-      <workItem from="1674919717587" duration="28699000" />
+      <workItem from="1674919717587" duration="56163000" />
     </task>
     <task id="LOCAL-00001" summary="0.0.2-ALFA">
       <created>1675284351329</created>
@@ -189,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675284351329</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="0.0.3-ALFA">
+      <created>1675894551276</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675894551276</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +197,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0.0.2-ALFA" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.2-ALFA" />
+    <MESSAGE value="0.0.3-ALFA" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.3-ALFA" />
   </component>
 </project>
