@@ -21,7 +21,7 @@
 </ul>
 
 <h3>Демонстрация работы</h3>
-![Снимок экрана 2023-02-12 153234](https://user-images.githubusercontent.com/98654361/218311330-250b4f62-5b70-480f-8658-e601f0b4bb7a.png)
+<img src="https://user-images.githubusercontent.com/98654361/218311330-250b4f62-5b70-480f-8658-e601f0b4bb7a.png"></img>
 <br>
 <h3><ul>Реализованный функционал:</h3>
 <li>Приложение построено на Spring Framework, все модули запускаются и работают.</li>
