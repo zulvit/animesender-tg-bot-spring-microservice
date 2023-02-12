@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e5a3e45-2d60-41f9-84b9-349e10d16f25" name="Changes" comment="0.0.3-ALFA">
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/entity/Search.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/entity/Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/GettingVideoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/GettingVideoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/utils/filter/ResultFilterUtils.java" afterDir="false" />
+    <list default="true" id="5e5a3e45-2d60-41f9-84b9-349e10d16f25" name="Changes" comment="1.0.0-BETA">
+      <change afterPath="$PROJECT_DIR$/mail-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail-service/src/main/java/ru/zulvit/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/entity/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/entity/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/GettingVideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/GettingVideoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/MainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/MainServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +172,7 @@
       <workItem from="1674498754821" duration="3050000" />
       <workItem from="1674757122760" duration="3922000" />
       <workItem from="1674916799427" duration="1606000" />
-      <workItem from="1674919717587" duration="56163000" />
+      <workItem from="1674919717587" duration="59688000" />
     </task>
     <task id="LOCAL-00001" summary="0.0.2-ALFA">
       <created>1675284351329</created>
@@ -189,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675894551276</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1.0.0-BETA">
+      <created>1676154985849</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676154985849</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +204,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0.0.2-ALFA" />
     <MESSAGE value="0.0.3-ALFA" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.3-ALFA" />
+    <MESSAGE value="1.0.0-BETA" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0.0-BETA" />
   </component>
 </project>

@@ -31,19 +31,15 @@ public class GettingVideoServiceImpl implements GettingVideoService {
 
 
     /**
-     * @param search название аниме
      * @return лист с ответом: ссылки на плеер, озвучки, картинки
      */
     @Override
     public List<Video> searchByTitle(@NotNull Search search) {
         var request = prepareRequest(search);
-        log.warn(request);
         var response = getResponse(request);
-
         List<Video> videos = new ArrayList<>();
         if (getSearchTotal(response) != NOT_FOUND) {
             long countAnime = getSearchTotal(response);
-            System.out.println("Найдено всего: " + countAnime);
             for (int i = 0; i < countAnime; i++) {
                 Video video = new Video.Builder()
                         .id(Objects.requireNonNull(getId(response)).get(i))
@@ -54,19 +50,20 @@ public class GettingVideoServiceImpl implements GettingVideoService {
                         .build();
                 videos.add(video);
             }
-        return videos;
+            return videos;
         } else {
             return null;
         }
     }
 
     /**
-     * @return результат поиска на сервере
+     * @param request подготовленный запрос
+     * @return ответ от сервера
      */
     private String getResponse(@NotNull String request) {
         try {
             HttpURLConnection connection = (HttpURLConnection) (new URL(request)).openConnection();
-            connection.setRequestMethod(HttpPost.METHOD_NAME); //"POST"
+            connection.setRequestMethod(HttpPost.METHOD_NAME);
             connection.setUseCaches(false);
             connection.setConnectTimeout(CONNECT_TIMEOUT);
             connection.setReadTimeout(READ_TIMEOUT);
@@ -83,7 +80,7 @@ public class GettingVideoServiceImpl implements GettingVideoService {
                 log.debug(stringBuilder);
                 return stringBuilder.toString();
             }
-            System.out.printf("HTTP SENDER: FAIL %s\n", connection.getResponseCode());
+            log.warn(connection.getResponseCode());
         } catch (IOException var6) {
             var6.printStackTrace();
         }
@@ -91,9 +88,11 @@ public class GettingVideoServiceImpl implements GettingVideoService {
     }
 
     /**
+     * @param search объект, содержащий информацию о поиске
      * @return подготовленный для отправки на сервер запрос
      */
     private String prepareRequest(@NotNull Search search) {
+        log.debug(search);
         return "https://kodikapi.com/search?" +
                 "token=" + search.getToken() +
                 "&with_page_links=" + search.isWithPageLinks() +
@@ -134,7 +133,7 @@ public class GettingVideoServiceImpl implements GettingVideoService {
     }
 
     /**
-     * @return Лист со всеми названиями
+     * @return лист со всеми названиями
      */
     private ArrayList<String> getTitle(@NotNull String path) {
         ArrayList<String> listTitles = new ArrayList<>();

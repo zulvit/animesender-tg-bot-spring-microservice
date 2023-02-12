@@ -15,6 +15,8 @@ import ru.zulvit.service.ProducerService;
 import ru.zulvit.service.enums.ServiceCommands;
 import ru.zulvit.utils.filter.ResultFilterUtils;
 
+import javax.validation.constraints.NotNull;
+
 import static ru.zulvit.entity.enums.UserState.BASIC_STATE;
 import static ru.zulvit.entity.enums.UserState.WAIT_EMAIL_CONFIRMATION_STATE;
 import static ru.zulvit.service.enums.ServiceCommands.*;
@@ -27,7 +29,8 @@ public class MainServiceImpl implements MainService {
     private final AppUserDAO appUserDAO;
     private final GettingVideoService gettingVideoService;
 
-    public MainServiceImpl(RawDataDAO rawDataDAO, ProducerService producerService, AppUserDAO appUserDAO, GettingVideoService gettingVideoService) {
+    public MainServiceImpl(RawDataDAO rawDataDAO, ProducerService producerService,
+                           AppUserDAO appUserDAO, GettingVideoService gettingVideoService) {
         this.rawDataDAO = rawDataDAO;
         this.producerService = producerService;
         this.appUserDAO = appUserDAO;
@@ -75,12 +78,15 @@ public class MainServiceImpl implements MainService {
         } else if (START.equals(serviceCommand)) {
             return "Hello. Let's start! Enter /help";
         } else {
-            Search search = new Search(command, 1);
-            var searchResult = gettingVideoService.searchByTitle(search);
-            var filteredSearchResult = ResultFilterUtils.filterRepeat(searchResult);
-            log.debug(searchResult);
-            return filteredSearchResult.toString();
+            return search(command);
         }
+    }
+
+    private String search(@NotNull String title) {
+        Search search = new Search(title, 1);
+        var searchResult = gettingVideoService.searchByTitle(search);
+        var filteredSearchResult = ResultFilterUtils.filterRepeat(searchResult);
+        return filteredSearchResult.toString();
     }
 
     private String help() {

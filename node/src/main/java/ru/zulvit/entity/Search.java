@@ -13,7 +13,6 @@ public class Search {
     private final String title;
     private final int season;
 
-
     public Search(String title, int season) {
         this.title = title;
         this.season = season;
