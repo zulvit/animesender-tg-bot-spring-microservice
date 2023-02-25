@@ -11,6 +11,7 @@ import ru.zulvit.entity.RawData;
 import ru.zulvit.entity.Search;
 import ru.zulvit.service.GettingVideoService;
 import ru.zulvit.service.MainService;
+import ru.zulvit.service.ParsingImageService;
 import ru.zulvit.service.ProducerService;
 import ru.zulvit.service.enums.ServiceCommands;
 import ru.zulvit.utils.filter.ResultFilterUtils;
@@ -28,13 +29,15 @@ public class MainServiceImpl implements MainService {
     private final ProducerService producerService;
     private final AppUserDAO appUserDAO;
     private final GettingVideoService gettingVideoService;
+    private final ParsingImageService parsingImageService;
 
     public MainServiceImpl(RawDataDAO rawDataDAO, ProducerService producerService,
-                           AppUserDAO appUserDAO, GettingVideoService gettingVideoService) {
+                           AppUserDAO appUserDAO, GettingVideoService gettingVideoService, ParsingImageService parsingImageService) {
         this.rawDataDAO = rawDataDAO;
         this.producerService = producerService;
         this.appUserDAO = appUserDAO;
         this.gettingVideoService = gettingVideoService;
+        this.parsingImageService = parsingImageService;
     }
 
     @Override
@@ -86,6 +89,13 @@ public class MainServiceImpl implements MainService {
         Search search = new Search(title, 1);
         var searchResult = gettingVideoService.searchByTitle(search);
         var filteredSearchResult = ResultFilterUtils.filterRepeat(searchResult);
+
+        //TODO переписать этот код, написан только для теста
+        for (ru.zulvit.entity.Video video : filteredSearchResult) {
+            var imagesSearchResult = parsingImageService.parse(video.getWorldArtLink());
+            log.debug(imagesSearchResult);
+        }
+        log.debug(searchResult);
         return filteredSearchResult.toString();
     }
 

@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e5a3e45-2d60-41f9-84b9-349e10d16f25" name="Changes" comment="1.0.0-BETA">
-      <change afterPath="$PROJECT_DIR$/mail-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mail-service/src/main/java/ru/zulvit/Main.java" afterDir="false" />
+    <list default="true" id="5e5a3e45-2d60-41f9-84b9-349e10d16f25" name="Changes" comment="1.0.1-BETA">
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/ParsingImageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/ParsingImageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/entity/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/entity/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/GettingVideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/GettingVideoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/MainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/service/impl/MainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/utils/filter/ResultFilterUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/ru/zulvit/utils/filter/ResultFilterUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,35 +47,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-16",
-    "last_opened_file_path": "/home/savva/IdeaProjects/animesender-tg-bot-spring-microservice/node/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "1394e66ed7227b3bab8e3aeba688b068",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-16&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/savva/IdeaProjects/animesender-tg-bot-spring-microservice/node/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;82ba62e2e23f3214015c12544057b64c&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\savva\IdeaProjects\animesender-tg-bot-spring-microservice\dispatcher\src\main\resources" />
@@ -146,7 +147,9 @@
       </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -172,7 +175,9 @@
       <workItem from="1674498754821" duration="3050000" />
       <workItem from="1674757122760" duration="3922000" />
       <workItem from="1674916799427" duration="1606000" />
-      <workItem from="1674919717587" duration="59688000" />
+      <workItem from="1674919717587" duration="59717000" />
+      <workItem from="1677356085933" duration="159000" />
+      <workItem from="1677356266633" duration="7080000" />
     </task>
     <task id="LOCAL-00001" summary="0.0.2-ALFA">
       <created>1675284351329</created>
@@ -195,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676154985849</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1.0.1-BETA">
+      <created>1676203214438</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676203214438</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +217,7 @@
     <MESSAGE value="0.0.2-ALFA" />
     <MESSAGE value="0.0.3-ALFA" />
     <MESSAGE value="1.0.0-BETA" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0.0-BETA" />
+    <MESSAGE value="1.0.1-BETA" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0.1-BETA" />
   </component>
 </project>

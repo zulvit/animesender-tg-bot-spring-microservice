@@ -12,17 +12,17 @@ public class ResultFilterUtils {
      * @return отфильтрованный список, без повторов по названию
      */
     public static List<Video> filterRepeat(@NotNull List<Video> videos) {
-        ArrayList<Video> arrayList = new ArrayList<>();
+        List<Video> filteredVideoList = new ArrayList<>();
         for (Video video : videos) {
             boolean flag = false;
-            for (Video value : arrayList) {
+            for (Video value : filteredVideoList) {
                 if (value.getTitle().equals(video.getTitle())) {
                     flag = true;
                     break;
                 }
             }
-            if (!flag) arrayList.add(video);
+            if (!flag) filteredVideoList.add(video);
         }
-        return arrayList;
+        return filteredVideoList;
     }
 }

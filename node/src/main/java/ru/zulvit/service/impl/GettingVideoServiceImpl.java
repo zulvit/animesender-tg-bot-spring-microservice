@@ -121,7 +121,7 @@ public class GettingVideoServiceImpl implements GettingVideoService {
     /**
      * @return количество найденных в БД аниме
      */
-    public long getSearchTotal(@NotNull String path) {
+    private long getSearchTotal(@NotNull String path) {
         long total = NOT_FOUND;
         try {
             JSONObject rootJsonObject = (JSONObject) jsonParser.parse(path);
